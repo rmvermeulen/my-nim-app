@@ -1,10 +1,10 @@
 .PHONY: clean dev build
 
 build: clean
-	karun app.nim
+	karun src/app.nim
 
 clean:
-	rm app.js
+	rm -f app.js
 
 dev:
 	karun -r src/app.nim

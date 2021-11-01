@@ -16,6 +16,8 @@ var list: seq[Item] = @[
   ]
 proc createDom(): VNode =
   buildHtml(tdiv):
+    link(rel="stylesheet", href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"):
+      text ""
     h1: text "My awesome Karax app!"
     tdiv(class = "flex flex-row")
     ul:
@@ -23,7 +25,7 @@ proc createDom(): VNode =
         li(class="flex flex-row"):
             italic:
               text item.name
-            p:
+            p(class="px-8 text-red-400"):
               text " is a "
             pre:
               text item.type
