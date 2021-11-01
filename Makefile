@@ -7,4 +7,4 @@ clean:
 	rm app.js
 
 dev:
-	karun -r app.nim
+	karun -r src/app.nim
